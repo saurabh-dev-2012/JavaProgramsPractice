@@ -1,0 +1,17 @@
+package com.shapecalculator.impl;
+
+import com.shapecalculator.ShapeCalculator;
+
+public class DiamondCalculator extends ShapeCalculator {
+
+	public String calculateShape(Integer height, String label, Integer labelRow) throws Exception {
+		System.out.println("Entering calculateShape method");
+		try{
+			return getUpperTraingle(height, label, labelRow);
+		}catch(Exception e){
+			System.out.println("Exception occurred : " + e.getMessage());
+			throw e;
+		}
+	}
+
+}

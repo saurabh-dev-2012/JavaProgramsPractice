@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="com.mypractice.logic.Anagram"/>
+<fullyQualifiedTypeName name="java.lang.Boolean"/>
+<fullyQualifiedTypeName name="com.mypractice.array.OddOccurrence"/>
+<fullyQualifiedTypeName name="net.roseindia.model.Diamond"/>
+<fullyQualifiedTypeName name="net.roseindia.model.Rectangle"/>
+<fullyQualifiedTypeName name="net.roseindia.model.Square"/>
+<fullyQualifiedTypeName name="net.roseindia.model.Triangle"/>
+<fullyQualifiedTypeName name="org.springframework.web.servlet.ModelAndView"/>
+</qualifiedTypeNameHistroy>

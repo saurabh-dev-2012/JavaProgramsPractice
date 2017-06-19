@@ -1,0 +1,41 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Spring 4 Example</title>
+</head>
+<body>
+<h3>Login Form</h3>
+<FONT color="blue">
+User Name="UserName" and password="password"
+</FONT>
+<form:form action="loginform.html"  commandName="loginForm">
+	<table>
+		<tr>		
+		    <td>
+		    	Shape Type:<select name="shapeType" required>
+				  <option value="triangle">Triangle</option>
+				  <option value="diamond">Diamond</option>
+				  <option value="rectangle">Rectangle</option>
+				  <option value="square">Square</option>
+				</select>
+		    </td>			
+		</tr>
+		<tr>
+			<td>Height: <input type="number" name="hight" min="1" max="50" required /></td>
+		</tr>
+		<tr>
+			<td>Label: <input type="text" name="label" value="HI" /></td>
+		</tr>
+		<tr>
+			<td>Row: <input type="number" name="row"  min="1" max="50"/></td>
+		</tr>
+		<tr>
+			<td><input type="submit" value="Submit" /></td>
+		</tr>
+	</table>
+</form:form>
+</body>
+</html>

@@ -1,0 +1,42 @@
+package net.roseindia.form;
+import javax.validation.constraints.Size;
+import org.hibernate.validator.constraints.NotEmpty;
+public class ShapeForm {
+	
+	@NotEmpty
+	private String shapeType;	
+	@NotEmpty
+	@Size(min = 1, max = 50)
+	private String height;
+	private String label;
+	@Size(min = 1, max = 50)
+	private String row;
+	
+	public String getShapeType() {
+		return shapeType;
+	}
+	public void setShapeType(String shapeType) {
+		this.shapeType = shapeType;
+	}
+	public String getLabel() {
+		return label;
+	}
+	public void setLabel(String label) {
+		this.label = label;
+	}
+
+	public String getHeight() {
+		return height;
+	}
+	public void setHeight(String height) {
+		this.height = height;
+	}
+	public String getRow() {
+		return row;
+	}
+	public void setRow(String row) {
+		this.row = row;
+	}
+
+
+}

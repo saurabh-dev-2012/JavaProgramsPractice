@@ -1,0 +1,5 @@
+com\shapecalculator\ShapeCalculator.class
+com\controller\ShapeController.class
+com\shapecalculator\AbstractShapeFactory.class
+com\shapecalculator\impl\DiamondCalculator.class
+com\shapecalculator\impl\TriangleCalculator.class

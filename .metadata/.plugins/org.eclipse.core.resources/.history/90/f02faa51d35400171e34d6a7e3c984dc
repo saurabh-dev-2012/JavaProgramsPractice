@@ -1,0 +1,5 @@
+package com.shapecalculator.impl;
+
+public class DiamondCalculator {
+
+}

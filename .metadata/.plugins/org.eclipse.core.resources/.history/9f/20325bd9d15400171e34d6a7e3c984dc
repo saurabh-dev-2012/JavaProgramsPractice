@@ -1,0 +1,131 @@
+package net.roseindia.model;
+
+public class Triangle implements Shape{
+	
+	public String triangle="";
+	
+	
+	@Override
+	public void draw(Integer height, String label, Integer labelRow) {
+		// TODO Auto-generated method stub
+		//triangle implementation
+       this.triangle = getUpperTraingle(height, label, labelRow);
+       
+	}
+	
+	public String getUpperTraingle(Integer height, String label, Integer labelRow){
+		triangle = "";
+	    int labelLength = label.length();
+	    int lableRowFinal = labelRow != null? labelRow : (height/2);
+	    int diff = lableRowFinal - labelLength;
+	
+	    for(int i=1;i<=height;i++){
+	            
+	        //space printing logic
+	        int j=0, k=0;
+	        while(j<(height-i)){
+	            triangle+=" ";
+	            j++;
+	        }
+	        //ascii character printing logic
+	        if(i == lableRowFinal && labelLength > 0){                    
+	            if(diff > 0){
+	                //label & ascii character printing
+	                 int firstHalf = diff/2;
+	                 int secondHalf = diff - firstHalf;
+	                 int l=0,m=0;
+	                 while(l<firstHalf)
+	                 {
+	                     triangle+="X ";                               
+	                     l++;
+	                 }
+	                 while(k<labelLength){                
+	                    triangle+=label.charAt(k)+" ";                               
+	                    k++;
+	                } 
+	                while(m<secondHalf)
+	                {
+	                    triangle+="X ";                               
+	                    m++;
+	                } 
+	            }else{
+	                //only label will be printed on line
+	                while(k<labelLength){                
+	                    triangle+=label.charAt(k)+" ";                               
+	                    k++;
+	                }
+	            }
+	        }else{
+	            //ascii character printing
+	            while(k<i){                
+	                triangle+="X ";                               
+	                k++;
+	            }
+	        }    
+	        
+	        triangle+="\n";
+	    }
+	    return triangle;
+	}
+	
+public String getLowerTraingle(Integer height, String label, Integer labelRow){
+	
+		triangle = "";
+        int labelLength = label.length();
+        int lableRowFinal = labelRow != null? labelRow : (height/2);
+        int diff = height - (lableRowFinal-1) - labelLength;
+        for(int i=1;i<=height;i++){
+                
+            //space printing logic
+            int j=0, k=0;
+            while(j<i){
+                triangle+=" ";
+                j++;
+            }
+            //ascii character printing logic
+            if(i == lableRowFinal && labelLength > 0){                    
+                if(diff > 0){
+                    //label & ascii character printing
+                     int firstHalf = diff - (diff/2);
+                     int secondHalf = diff - firstHalf;
+                     int l=0,m=0;
+                     while(l<firstHalf)
+                     {
+                         triangle+="X ";                               
+                         l++;
+                     }
+                     while(k<labelLength){                
+                        triangle+=label.charAt(k)+" ";                               
+                        k++;
+                    } 
+                    while(m<secondHalf)
+                    {
+                        triangle+="X ";                               
+                        m++;
+                    } 
+                }else{
+                    //only label will be printed on line
+                    while(k<labelLength){                
+                        triangle+=label.charAt(k)+" ";                               
+                        k++;
+                    }
+                }
+            }else{
+                //ascii character printing
+                while(k<(height-i+1)){                
+                    triangle+="X ";                               
+                    k++;
+                }
+            }    
+            
+            triangle+="\n";
+        }
+        return triangle;
+    }
+	
+	public String toString(){
+		
+		return triangle;
+	}
+
+}

@@ -1,0 +1,46 @@
+<!-- 
+Add input text fields on this page and take user input and pass it to controller
+<br/>
+${message}
+<br/>
+<a href="displayShape.html">Submit User Input</a>
+
+ -->
+ <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>ASCII Shapes</title>
+</head>
+<body>
+<h3>ASCII Shapes</h3>
+<form:form action="displayShape.html" method="GET">
+	<table>
+		<tr>		
+		    <td>
+		    	Shape Type:<select name="shapeType" required>
+				  <option value="triangle">Triangle</option>
+				  <option value="diamond">Diamond</option>
+				  <option value="rectangle">Rectangle</option>
+				  <option value="square">Square</option>
+				</select>
+		    </td>			
+		</tr>
+		<tr>
+			<td>Height: <input type="number" name="hight" min="1" max="50" required /></td>
+		</tr>
+		<tr>
+			<td>Label: <input type="text" name="label" value="HI" /></td>
+		</tr>
+		<tr>
+			<td>Row: <input type="number" name="row"  min="1" max="50"/></td>
+		</tr>
+		<tr>
+			<td><input type="submit" value="Submit" /></td>
+		</tr>
+	</table>
+</form:form>
+</body>
+</html>
